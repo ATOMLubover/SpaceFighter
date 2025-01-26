@@ -104,6 +104,30 @@ void EntityManager::OnRender( const Camera& cam )
         player->OnRender( cam );
 }
 
+void EntityManager::Refresh()
+{
+    have_player_exploded = false;
+    {
+        player->Refresh();
+
+        int width_win = Game::GetInstance().GetWidth();
+        int height_win = Game::GetInstance().GetHeight();
+        int width_player = player->GetWidth();
+        int height_player = player->GetHeight();
+        PlaneVector pos(
+            static_cast<double>( width_win / 2 - width_player / 2 ),
+            static_cast<double>( height_win - height_player - 100 ) );
+        player->SetPosition( pos );
+    }
+
+    DestroyList( bullets_enemy );
+    DestroyList( bullets_player );
+
+    DestroyList( enemy_list );
+
+    DestroyList( drop_list );
+}
+
 bool EntityManager::CheckInsideWindow( const Entity& entity )
 {
     int width_win = Game::GetInstance().GetWidth();

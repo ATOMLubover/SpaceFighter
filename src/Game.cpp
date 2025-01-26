@@ -74,8 +74,8 @@ void Game::Init()
 
 	// managers init
 	ResourceManager::GetInstance().LoadResources( renderer ); // be aware that resources should be loaded most firstly
-	SceneManager::GetInstance().Init();
 	EntityManager::GetInstance().Init();
+	SceneManager::GetInstance().Init();
 
 	// data members init
 	camera.SetRenderer( renderer );
@@ -157,7 +157,8 @@ void Game::HandleEvent( SDL_Event& event )
 
 void Game::Update( float delta )
 {
-	if ( SceneManager::GetInstance().GetCurrState() != SceneManager::EnumSceneState::END )
+	if ( SceneManager::GetInstance().GetCurrState() != SceneManager::EnumSceneState::END
+		 && !EntityManager::GetInstance().PlayerHasExploded() )
 		UpdateBackground( delta );
 
 	SceneManager::GetInstance().OnUpdate( delta );

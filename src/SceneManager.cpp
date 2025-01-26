@@ -63,26 +63,29 @@ void SceneManager::Deinit()
     delete scene_menu;
 }
 
+void SceneManager::Refresh()
+{
+    //state_curr = EnumSceneState::MENU;
+}
+
 void SceneManager::SwitchScene( EnumSceneState state )
 {
-    if ( scene_curr ) scene_curr->OnExit();
+    if ( scene_curr ) 
+        scene_curr->OnExit();
 
     state_curr = state;
     switch ( state )
     {
         case EnumSceneState::MENU:
             scene_curr = scene_menu;
-            state_curr = EnumSceneState::MENU;
             break;
 
         case EnumSceneState::GAMING:
             scene_curr = scene_gaming;
-            state_curr = EnumSceneState::GAMING;
             break;
 
         case EnumSceneState::END:
             scene_curr = scene_end;
-            state_curr = EnumSceneState::END;
             break;
 
         default:

@@ -4,6 +4,7 @@
 #include "AudioManager.h"
 #include "SceneManager.h"
 #include "Game.h"
+#include "EntityManager.h"
 
 SceneMenu::SceneMenu()
 {
@@ -19,6 +20,8 @@ SceneMenu::~SceneMenu()
 
 void SceneMenu::OnEnter()
 {
+    SDL_Log( "enter scene_menu\n" );
+
     Refresh();
 
     AudioManager::GetInstance().PlayAudio( "bgm_menu", -1 );
@@ -26,6 +29,8 @@ void SceneMenu::OnEnter()
 
 void SceneMenu::OnExit()
 {
+    SDL_Log( "exit scene_menu\n" );
+
     AudioManager::GetInstance().StopMusic();
 }
 
@@ -82,6 +87,8 @@ void SceneMenu::Refresh()
     timer_text_blink.Resume();
 
     is_text_visible = true;
+
+    EntityManager::GetInstance().Refresh();
 }
 
 void SceneMenu::LoadResources()

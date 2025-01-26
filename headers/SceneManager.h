@@ -36,6 +36,8 @@ public:
     void Init();
     void Deinit();
 
+    void Refresh();
+
     void SwitchScene( EnumSceneState state );
     EnumSceneState GetCurrState() const { return state_curr; }
 

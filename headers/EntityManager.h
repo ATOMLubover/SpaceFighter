@@ -28,6 +28,8 @@ public:
     void Init();
     void Deinit();
 
+    void Refresh();
+
     void OnHandle( SDL_Event& event );
     void OnUpdate( float delta );
     void OnRender( const Camera& cam );
@@ -53,6 +55,9 @@ private:
 
     void DestroyInvalidEntity();
 
+    template<class Elem>
+    void DestroyList( std::list<Elem*>& l );
+
 private:
     static const float offset_check_inside;
 
@@ -71,5 +76,13 @@ private:
     std::mt19937 rand_gen;
     std::uniform_real_distribution<float> hypodispersion;
 };
+
+template<class Elem>
+void EntityManager::DestroyList( std::list<Elem*>& l)
+{
+    for ( Elem* elem : l )
+        delete elem;
+    l.clear();
+}
 
 #endif // !_ENTITY_MANAGER_H_

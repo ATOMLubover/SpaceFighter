@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "D:/VSCode/SpaceFighter/SpaceFighter.exe"
+			"path" : "RelWithDebInfo/SpaceFighter.exe"
 		},
 		{
-			"path" : "D:/VSCode/SpaceFighter/SpaceFighter.pdb"
+			"path" : "RelWithDebInfo/SpaceFighter.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -42,7 +42,7 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 62,
+				"line" : 64,
 				"parent" : 0
 			},
 			{
@@ -59,7 +59,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG -std:c++17"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG -std:c++17"
 				}
 			],
 			"includes" : 
@@ -124,6 +124,46 @@
 				21,
 				22
 			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-DWIN32"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
+					"path" : "D:/VSCode/SpaceFighter/thirdparty/sdl2/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/VSCode/SpaceFighter/thirdparty/sdl2_mixer/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/VSCode/SpaceFighter/thirdparty/sdl2_image/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/VSCode/SpaceFighter/thirdparty/sdl2_ttf/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/VSCode/SpaceFighter/thirdparty/json/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/VSCode/SpaceFighter/headers"
+				}
+			],
+			"language" : "RC",
+			"sourceIndexes" : 
+			[
+				23
+			]
 		}
 	],
 	"dependencies" : 
@@ -138,11 +178,11 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG",
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "/machine:x64 /INCREMENTAL:NO /subsystem:console",
+				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:windows",
 				"role" : "flags"
 			},
 			{
@@ -232,7 +272,8 @@
 				19,
 				20,
 				21,
-				22
+				22,
+				23
 			]
 		}
 	],
@@ -374,6 +415,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/Background.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "resources/ico/my_icon.rc",
 			"sourceGroupIndex" : 0
 		}
 	],

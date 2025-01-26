@@ -20,6 +20,8 @@ public:
     void OnUpdate( float delta ) override;
     void OnRender( const Camera& cam ) override;
 
+    void Refresh();
+
     bool IsShooting();
 
     bool IsExploding() const { return is_valid && ( hp <= 0 ); }

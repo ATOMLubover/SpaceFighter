@@ -123,7 +123,7 @@
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>D:/VSCode/SpaceFighter/build/Debug/SpaceFighter.lib</ImportLibrary>
       <ProgramDataBaseFile>D:/VSCode/SpaceFighter/SpaceFighter.pdb</ProgramDataBaseFile>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -168,7 +168,7 @@
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>D:/VSCode/SpaceFighter/build/Release/SpaceFighter.lib</ImportLibrary>
       <ProgramDataBaseFile>D:/VSCode/SpaceFighter/SpaceFighter.pdb</ProgramDataBaseFile>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -213,7 +213,7 @@
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>D:/VSCode/SpaceFighter/build/MinSizeRel/SpaceFighter.lib</ImportLibrary>
       <ProgramDataBaseFile>D:/VSCode/SpaceFighter/build/MinSizeRel/SpaceFighter.pdb</ProgramDataBaseFile>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -257,7 +257,7 @@
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>D:/VSCode/SpaceFighter/build/RelWithDebInfo/SpaceFighter.lib</ImportLibrary>
       <ProgramDataBaseFile>D:/VSCode/SpaceFighter/build/RelWithDebInfo/SpaceFighter.pdb</ProgramDataBaseFile>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -344,6 +344,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="D:\VSCode\SpaceFighter\src\BulletEnemy.cpp" />
     <ClCompile Include="D:\VSCode\SpaceFighter\src\DropItem.cpp" />
     <ClCompile Include="D:\VSCode\SpaceFighter\src\Background.cpp" />
+    <ResourceCompile Include="D:\VSCode\SpaceFighter\resources\ico\my_icon.rc" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="D:\VSCode\SpaceFighter\build\ZERO_CHECK.vcxproj">

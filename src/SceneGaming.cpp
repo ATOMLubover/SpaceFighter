@@ -18,6 +18,8 @@ SceneGaming::~SceneGaming()
 
 void SceneGaming::OnEnter()
 {
+    SDL_Log( "enter scene_gaming\n" );
+
     Refresh();
 
     AudioManager::GetInstance().PlayAudio( "bgm_battle", -1 );
@@ -25,6 +27,8 @@ void SceneGaming::OnEnter()
 
 void SceneGaming::OnExit()
 {
+    SDL_Log( "exit scene_gaming\n" );
+
     AudioManager::GetInstance().StopMusic();
 }
 
@@ -62,7 +66,9 @@ void SceneGaming::OnRender( const Camera& cam )
 }
 
 void SceneGaming::Refresh()
-{ }
+{
+    EntityManager::GetInstance().Refresh();
+}
 
 void SceneGaming::LoadResources()
 {
