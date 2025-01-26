@@ -1,0 +1,3 @@
+D:/VSCode/SpaceFighter/build/CMakeFiles/SpaceFighter.dir
+D:/VSCode/SpaceFighter/build/CMakeFiles/ALL_BUILD.dir
+D:/VSCode/SpaceFighter/build/CMakeFiles/ZERO_CHECK.dir
