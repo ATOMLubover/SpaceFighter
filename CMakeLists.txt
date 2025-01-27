@@ -63,6 +63,6 @@ add_executable(SpaceFighter
 
 target_link_libraries(SpaceFighter SDL2 SDL2main SDL2_mixer SDL2_image SDL2_ttf)
 
-# set_target_properties(SpaceFighter PROPERTIES
-#     WIN32_EXECUTABLE TRUE
-# )
+set_target_properties(SpaceFighter PROPERTIES
+    WIN32_EXECUTABLE TRUE
+)
